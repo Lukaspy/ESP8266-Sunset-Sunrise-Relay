@@ -8,11 +8,11 @@ import json
 lat = 43.6954 
 lng = -116.3540
 led = Pin(13, Pin.OUT)
+relay = Pin(12, Pin.OUT)
+button = Pin(0, Pin.IN, Pin.PULL_UP)
 
 #sonoff led is active low, this sets it off by default
 led.value(1) 
-relay = Pin(12, Pin.OUT)
-button = Pin(0, Pin.IN, Pin.PULL_UP)
 
 #set internal time according to network time
 settime()
